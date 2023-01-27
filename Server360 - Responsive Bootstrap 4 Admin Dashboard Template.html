@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://templates.iqonic.design/server360/html/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <!-- Required meta tags -->
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Server360 - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="https://templates.iqonic.design/server360/html/images/favicon.ico">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/bootstrap.min.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/typography.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/responsive.css">
+   <style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(255,255,255,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.apexcharts-canvas.dark {
+  background: #343F57;
+}
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-gridline, .apexcharts-text {
+  pointer-events: none;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+.apexcharts-tooltip.light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+.apexcharts-tooltip.dark {
+  color: #fff;
+  background: rgba(30,30,30, 0.8);
+}
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line {
+  pointer-events: none;
+}
+
+.apexcharts-tooltip.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.apexcharts-tooltip.light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+.apexcharts-tooltip.dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+.apexcharts-tooltip-series-group.active, .apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+.apexcharts-tooltip-candlestick > div {
+  margin: 4px 0;
+}
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after, .apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after, .apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+.apexcharts-xaxistooltip-bottom.dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color:#ECEFF1
+}
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+.apexcharts-xaxistooltip-top.dark:after {
+  border-top-color:rgba(0, 0, 0, 0.5);
+}
+.apexcharts-xaxistooltip-top.dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.apexcharts-xaxistooltip.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after, .apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after, .apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after, .apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+.apexcharts-yaxistooltip-left.dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+.apexcharts-yaxistooltip-left.dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+.apexcharts-yaxistooltip-right.dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+.apexcharts-yaxistooltip-right.dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.active {
+  opacity: 1;
+}
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs, .apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.active, .apexcharts-ycrosshairs.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-zoom-rect {
+  pointer-events: none;
+}
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_points, .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+.svg_select_points_l, .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+  fill: #888;
+}
+.apexcharts-canvas.zoomable .hovering-zoom {
+  cursor: crosshair
+}
+.apexcharts-canvas.zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-xaxis,
+.apexcharts-yaxis {
+  pointer-events: none;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoom-in-icon,
+.apexcharts-zoom-out-icon,
+.apexcharts-reset-zoom-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoom-in-icon svg,
+.apexcharts-zoom-out-icon svg,
+.apexcharts-reset-zoom-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.dark .apexcharts-zoom-icon svg,
+.dark .apexcharts-zoom-in-icon svg,
+.dark .apexcharts-zoom-out-icon svg,
+.dark .apexcharts-reset-zoom-icon svg,
+.dark .apexcharts-pan-icon svg,
+.dark .apexcharts-selection-icon svg,
+.dark .apexcharts-menu-icon svg,
+.dark .apexcharts-toolbar-custom-icon svg{
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.selected svg {
+  fill: #008FFB;
+}
+.light .apexcharts-selection-icon:not(.selected):hover svg,
+.light .apexcharts-zoom-icon:not(.selected):hover svg,
+.light .apexcharts-zoom-in-icon:hover svg,
+.light .apexcharts-zoom-out-icon:hover svg,
+.light .apexcharts-reset-zoom-icon:hover svg,
+.light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon, .apexcharts-menu-icon {
+  position: relative;
+}
+.apexcharts-reset-zoom-icon {
+  margin-left: 5px;
+}
+.apexcharts-zoom-icon, .apexcharts-reset-zoom-icon, .apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoom-in-icon, .apexcharts-zoom-out-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoom-out-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+.apexcharts-pan-icon.selected svg {
+  stroke: #008FFB;
+}
+.apexcharts-pan-icon:not(.selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  top: 0px;
+  right: 3px;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-toolbar svg {
+  pointer-events: none;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+.dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-toolbar {
+    /*opacity: 0;*/
+  }
+
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabel, .apexcharts-datalabel-label, .apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events, .apexcharts-radar-series path, .apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Resize generated styles */
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers, .resize-triggers > div, .contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers > div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}
+</style><style id="smooth-scrollbar-style">
+[data-scrollbar] {
+  display: block;
+  position: relative;
+}
+
+.scroll-content {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.scrollbar-track {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background: rgba(222, 222, 222, .75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+          transition: opacity 0.5s 0.5s ease-out;
+}
+.scrollbar-track.show,
+.scrollbar-track:hover {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.scrollbar-track-x {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+.scrollbar-track-y {
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+}
+.scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 4px;
+}
+</style></head>
+   <body>
+      <!-- loader Start -->
+      <div id="loading" style="display: none;">
+         <div id="loading-center">
+         </div>
+      </div>
+      <!-- loader END -->
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Sidebar  -->
+
+         <!-- TOP Nav Bar -->
+         <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+               <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <div class="iq-menu-bt d-flex align-items-center">
+                     <div class="wrapper-menu">
+                        <div class="main-circle"><i class="ri-arrow-left-s-line"></i></div>
+                        <div class="hover-circle"><i class="ri-arrow-right-s-line"></i></div>
+                     </div>
+                     <div class="iq-navbar-logo d-flex justify-content-between">
+                        <a href="https://templates.iqonic.design/server360/html/index.html" class="header-logo">
+                           <img src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/logo.png" class="img-fluid rounded-normal" alt="">
+                           <div class="pt-2 pl-2 logo-title">
+                              <span class="text-danger text-uppercase">Server<span class="text-primary ml-1">360</span></span>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="navbar-breadcrumb">
+                     <h4 class="mb-0 text-dark">Dashboard</h4>
+                     <p class="mb-0"><span class="text-danger">Hi there,</span> Great to see you again</p>
+                  </div>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                  <i class="ri-menu-3-line"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav ml-auto navbar-list">
+                        <li class="nav-item nav-icon">
+                           <div class="iq-search-bar">
+                              <form action="https://templates.iqonic.design/server360/html/#" class="searchbox">
+                                 <input type="text" class="text search-input" placeholder="Type here to search...">
+                                 <a class="search-link" href="https://templates.iqonic.design/server360/html/#"><i class="ri-search-line"></i></a>
+                              </form>
+                           </div>
+                        </li>
+                        <li class="nav-item nav-icon">
+                           <a href="https://templates.iqonic.design/server360/html/#" class="search-toggle iq-waves-effect text-primary rounded">
+                           <i class="ri-notification-line block"></i>
+                           <span class="bg-danger dots"></span>
+                           </a>
+                           <div class="iq-sub-dropdown">
+                              <div class="iq-card shadow-none m-0">
+                                 <div class="iq-card-body p-0">
+                                    <div class="bg-primary p-3">
+                                       <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1">4</small></h5>
+                                    </div>
+                                    <a href="https://templates.iqonic.design/server360/html/#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/01.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Emma Watson Barry</h6>
+                                             <small class="float-right">Just Now</small>
+                                             <p class="mb-0">95 MB</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="https://templates.iqonic.design/server360/html/#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/02.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">New customer is join</h6>
+                                             <small class="float-right">5 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="https://templates.iqonic.design/server360/html/#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/03.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Two customer is left</h6>
+                                             <small class="float-right">2 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="https://templates.iqonic.design/server360/html/#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/04.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">New Mail from Fenny</h6>
+                                             <small class="float-right">3 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="navbar-list">
+                     <li class="line-height">
+                        <a href="https://templates.iqonic.design/server360/html/#" class="search-toggle iq-waves-effect d-flex align-items-center">
+                        <img src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/user.png" class="img-fluid rounded-circle" alt="user">
+                        </a>
+                        <div class="iq-sub-dropdown iq-user-dropdown">
+                           <div class="iq-card shadow-none m-0">
+                              <div class="iq-card-body p-0 ">
+                                 <div class="bg-primary p-3">
+                                    <h5 class="mb-0 text-white line-height">Hello Barry Tech</h5>
+                                    <span class="text-white font-size-12">Available</span>
+                                 </div>
+                                 <a href="https://templates.iqonic.design/server360/html/profile.html" class="iq-sub-card iq-bg-primary-hover">
+                                    <div class="media align-items-center">
+                                       <div class="rounded iq-card-icon iq-bg-primary">
+                                          <i class="ri-file-user-line"></i>
+                                       </div>
+                                       <div class="media-body ml-3">
+                                          <h6 class="mb-0 ">My Profile</h6>
+                                          <p class="mb-0 font-size-12">View personal profile details.</p>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <a href="https://templates.iqonic.design/server360/html/profile-edit.html" class="iq-sub-card iq-bg-primary-hover">
+                                    <div class="media align-items-center">
+                                       <div class="rounded iq-card-icon iq-bg-primary">
+                                          <i class="ri-profile-line"></i>
+                                       </div>
+                                       <div class="media-body ml-3">
+                                          <h6 class="mb-0 ">Edit Profile</h6>
+                                          <p class="mb-0 font-size-12">Modify your personal details.</p>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <a href="https://templates.iqonic.design/server360/html/account-setting.html" class="iq-sub-card iq-bg-primary-hover">
+                                    <div class="media align-items-center">
+                                       <div class="rounded iq-card-icon iq-bg-primary">
+                                          <i class="ri-account-box-line"></i>
+                                       </div>
+                                       <div class="media-body ml-3">
+                                          <h6 class="mb-0 ">Account settings</h6>
+                                          <p class="mb-0 font-size-12">Manage your account parameters.</p>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <a href="https://templates.iqonic.design/server360/html/privacy-setting.html" class="iq-sub-card iq-bg-primary-hover">
+                                    <div class="media align-items-center">
+                                       <div class="rounded iq-card-icon iq-bg-primary">
+                                          <i class="ri-lock-line"></i>
+                                       </div>
+                                       <div class="media-body ml-3">
+                                          <h6 class="mb-0 ">Privacy Settings</h6>
+                                          <p class="mb-0 font-size-12">Control your privacy parameters.</p>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="d-inline-block w-100 text-center p-3">
+                                    <a class="bg-primary iq-sign-btn" href="https://templates.iqonic.design/server360/html/sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <!-- TOP Nav Bar END -->
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container-fluid">
+               <div class="row content-body">
+                  <div class="col-lg-8">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height iq-bg-danger">
+                        <div class="iq-card-body box iq-box-relative">
+                           <div class="box-image float-right">
+                              <img class="rounded img-fluid" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/37.png" alt="profile">
+                           </div>
+                           <h4 class="d-block mb-3 text-black">Welcome back John</h4>
+                           <p class="d-inline-block welcome-text text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate facilisis velit, vitae fermentum nulla ultrices et.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-body">
+                           <ul class="suggestions-lists m-0 p-0">
+                              <li class="d-flex mb-4 align-items-center justify-content-between">
+                                 <div class="col-sm-9 p-0">
+                                    <div class="d-flex align-items-center">
+                                       <div class="avatar-55 text-center rounded iq-bg-danger">
+                                          <span>B5</span>
+                                       </div>
+                                       <div class="media-support-info ml-3">
+                                          <h5>Loads</h5>
+                                          <p class="mb-0">Online Participant</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-3 p-0">
+                                    <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                       <div class="iq-progress-bar">
+                                          <span class="bg-danger" data-percent="50" style="transition: width 2s ease 0s; width: 50%;"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="d-flex align-items-center justify-content-between">
+                                 <div class="col-sm-9 p-0">
+                                    <div class="d-flex align-items-center">
+                                       <div class="avatar-55 text-center rounded iq-bg-primary">
+                                          <span>G2</span>
+                                       </div>
+                                       <div class="media-support-info ml-3">
+                                          <h5>Requests</h5>
+                                          <p class="mb-0">Offline Participant</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-3 p-0">
+                                    <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                       <div class="iq-progress-bar">
+                                          <span class="bg-primary" data-percent="80" style="transition: width 2s ease 0s; width: 80%;"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-8 row m-0 p-0">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                           <div class="iq-card-body">
+                              <div class="icon iq-icon-box iq-bg-primary rounded" data-wow-delay="0.2s">
+                                 <i class="ri-cpu-line"></i>
+                              </div>
+                              <div class="mt-4">
+                                 <h5 class="text-black text-uppercase">CPU</h5>
+                                 <h3 class="d-flex text-primary"> 4.8%<i class="ri-arrow-up-line"></i></h3>
+                              </div>
+                              <p class="mb-0 mt-1">Avg +65%</p>
+                              <div class="mt-3">
+                                 <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                    <div class="iq-progress-bar">
+                                       <span class="bg-primary" data-percent="65" style="transition: width 2s ease 0s; width: 65%;"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                           <div class="iq-card-body">
+                              <div class="icon iq-icon-box iq-bg-danger rounded" data-wow-delay="0.2s">
+                                 <i class="ri-window-line"></i>
+                              </div>
+                              <div class="mt-4">
+                                 <h5 class="text-black text-uppercase">RAM</h5>
+                                 <h3 class="d-flex text-danger"> 4.2%<i class="ri-arrow-down-line"></i></h3>
+                              </div>
+                              <p class="mb-0 mt-1">Avg +85%</p>
+                              <div class="mt-3">
+                                 <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                    <div class="iq-progress-bar">
+                                       <span class="bg-danger" data-percent="85" style="transition: width 2s ease 0s; width: 85%;"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                           <div class="iq-card-body">
+                              <div class="icon iq-icon-box iq-bg-primary rounded" data-wow-delay="0.2s">
+                                 <i class="ri-u-disk-line"></i>
+                              </div>
+                              <div class="mt-4">
+                                 <h5 class="text-black text-uppercase">DISK</h5>
+                                 <h3 class="d-flex text-primary"> 5.8GB<i class="ri-arrow-up-line"></i></h3>
+                              </div>
+                              <p class="mb-0 mt-1">Avg +36%</p>
+                              <div class="mt-3">
+                                 <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                    <div class="iq-progress-bar">
+                                       <span class="bg-primary" data-percent="36" style="transition: width 2s ease 0s; width: 36%;"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                           <div class="iq-card-body">
+                              <div class="icon iq-icon-box iq-bg-danger rounded" data-wow-delay="0.2s">
+                                 <i class="ri-global-line"></i>
+                              </div>
+                              <div class="mt-4">
+                                 <h5 class="text-black text-uppercase">SERVICES</h5>
+                                 <h3 class="d-flex text-danger"> 3.5KB<i class="ri-arrow-down-line"></i></h3>
+                              </div>
+                              <p class="mb-0 mt-1">Avg +48%</p>
+                              <div class="mt-3">
+                                 <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                    <div class="iq-progress-bar">
+                                       <span class="bg-danger" data-percent="48" style="transition: width 2s ease 0s; width: 48%;"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="iq-card bg-danger iq-card-block iq-card-stretch iq-card-height-half">
+                        <div class="iq-card-body box iq-box-relative">
+                           <div class="d-flex flex-wrap justify-content-between align-items-center">
+                              <div class="col-7 p-0">
+                                 <div class="float-left progress-round income-progress mr-3" data-value="80">
+                                    <span class="progress-left">
+                                    <span class="progress-bar border-white" style="transform: rotate(108deg);"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                    <span class="progress-bar border-white" style="transform: rotate(180deg);"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded d-flex align-items-center justify-content-center text-center">
+                                       <div class="h4 mb-0">75</div>
+                                    </div>
+                                 </div>
+                                 <h5 class="d-block mt-2 text-white font-weight-500">Storage<br> Usage</h5>
+                              </div>
+                              <div class="col-5 pr-0 right-border-block position-relative">
+                                 <!-- <div class="avatar-30 text-center rounded-circle iq-bg-danger" data-wow-delay="0.2s">
+                                    <span class="font-size-14 align-item-center"><i class="ri-account-box-line"></i></span>
+                                 </div> -->
+                                 <h5 class="text-white mt-2">594875625</h5>
+                                 <span class="text-white">Online Users</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half iq-background-image">
+                        <div class="iq-card-body box iq-box-relative rounded">
+                           <div class="d-flex justify-content-between align-items-left">
+                              <div class="d-flex justify-content-between align-items-center">
+                                 <div class="float-left progress-round income-progress" data-value="80">
+                                    <span class="progress-left">
+                                    <span class="progress-bar border-primary" style="transform: rotate(108deg);"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                    <span class="progress-bar border-success" style="transform: rotate(180deg);"></span>
+                                    </span>
+                                 </div>
+                                 <div class="pl-3">
+                                    <ul class="float-right d-inline-block p-0 m-0 list-inline">
+                                       <li class="line-height-3">
+                                          <span class="text-danger total-progress position-relative pl-2">
+                                          <span class="bg-danger rounded"></span>Total Processes: 61<i class="ri-arrow-up-line"></i>
+                                          </span>
+                                       </li>
+                                       <li class="line-height-3">
+                                          <span class="text-primary total-progress position-relative pl-2">
+                                          <span class="bg-primary rounded"></span>Total Threands: 993<i class="ri-arrow-down-line"></i>
+                                          </span>
+                                       </li>
+                                       <li class="line-height-3">
+                                          <span class="text-success total-progress position-relative pl-2">
+                                          <span class="bg-success rounded"></span>Total Handles: 26957<i class="ri-arrow-up-line"></i>
+                                          </span>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-8">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Server Traffic Source</h4>
+                           </div>
+                           <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div class="dropdown">
+                                 <span class="dropdown-toggle dropdown-bg iq-bg-danger" id="dropdownMenuButton1" data-toggle="dropdown">
+                                 This Year<i class="ri-arrow-down-s-line ml-1 text-danger"></i>
+                                 </span>
+                                 <div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton1">
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-eye-fill mr-2"></i>View</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-printer-fill mr-2"></i>Print</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-file-download-fill mr-2"></i>Download</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="iq-card-body" style="position: relative;">
+                           <div id="report-chart-02" style="min-height: 185px;"><div id="apexchartsnekf70r8" class="apexcharts-canvas apexchartsnekf70r8 light" style="width: 985px; height: 170px;"><svg id="SvgjsSvg2266" width="985" height="170" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG2268" class="apexcharts-inner apexcharts-graphical" transform="translate(41.359375, 30)"><defs id="SvgjsDefs2267"><clippath id="gridRectMasknekf70r8"><rect id="SvgjsRect2274" width="933.9609375" height="116.34800000000001" x="-2" y="-2" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><clippath id="gridRectMarkerMasknekf70r8"><rect id="SvgjsRect2275" width="931.9609375" height="114.34800000000001" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><lineargradient id="SvgjsLinearGradient2281" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop2282" stop-opacity="0.65" stop-color="rgba(255,119,80,0.65)" offset="0"></stop><stop id="SvgjsStop2283" stop-opacity="0.5" stop-color="rgba(255,187,168,0.5)" offset="1"></stop><stop id="SvgjsStop2284" stop-opacity="0.5" stop-color="rgba(255,187,168,0.5)" offset="1"></stop></lineargradient></defs><line id="SvgjsLine2273" x1="0" y1="0" x2="0" y2="112.34800000000001" stroke="#b6b6b6" stroke-dasharray="3" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="112.34800000000001" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line><g id="SvgjsG2287" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG2288" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"><text id="SvgjsText2289" font-family="Helvetica, Arial, sans-serif" x="0" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2290" style="font-family: Helvetica, Arial, sans-serif;">Jan</tspan><title>Jan</title></text><text id="SvgjsText2291" font-family="Helvetica, Arial, sans-serif" x="132.8515625" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2292" style="font-family: Helvetica, Arial, sans-serif;">Feb</tspan><title>Feb</title></text><text id="SvgjsText2293" font-family="Helvetica, Arial, sans-serif" x="265.703125" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2294" style="font-family: Helvetica, Arial, sans-serif;">Mar</tspan><title>Mar</title></text><text id="SvgjsText2295" font-family="Helvetica, Arial, sans-serif" x="398.5546875" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2296" style="font-family: Helvetica, Arial, sans-serif;">Apr</tspan><title>Apr</title></text><text id="SvgjsText2297" font-family="Helvetica, Arial, sans-serif" x="531.40625" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2298" style="font-family: Helvetica, Arial, sans-serif;">May</tspan><title>May</title></text><text id="SvgjsText2299" font-family="Helvetica, Arial, sans-serif" x="664.2578125" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2300" style="font-family: Helvetica, Arial, sans-serif;">Jun</tspan><title>Jun</title></text><text id="SvgjsText2301" font-family="Helvetica, Arial, sans-serif" x="797.109375" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2302" style="font-family: Helvetica, Arial, sans-serif;">Jul</tspan><title>Jul</title></text><text id="SvgjsText2303" font-family="Helvetica, Arial, sans-serif" x="929.9609375" y="141.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2304" style="font-family: Helvetica, Arial, sans-serif;">Aug</tspan><title>Aug</title></text></g><line id="SvgjsLine2305" x1="0" y1="113.34800000000001" x2="929.9609375" y2="113.34800000000001" stroke="#78909c" stroke-dasharray="0" stroke-width="1"></line></g><g id="SvgjsG2316" class="apexcharts-grid"><g id="SvgjsG2317" class="apexcharts-gridlines-horizontal"><line id="SvgjsLine2325" x1="0" y1="0" x2="929.9609375" y2="0" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2326" x1="0" y1="22.469600000000003" x2="929.9609375" y2="22.469600000000003" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2327" x1="0" y1="44.93920000000001" x2="929.9609375" y2="44.93920000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2328" x1="0" y1="67.40880000000001" x2="929.9609375" y2="67.40880000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2329" x1="0" y1="89.87840000000001" x2="929.9609375" y2="89.87840000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2330" x1="0" y1="112.34800000000001" x2="929.9609375" y2="112.34800000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line></g><g id="SvgjsG2318" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine2319" x1="132.8515625" y1="113.34800000000001" x2="132.8515625" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2320" x1="265.703125" y1="113.34800000000001" x2="265.703125" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2321" x1="398.5546875" y1="113.34800000000001" x2="398.5546875" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2322" x1="531.40625" y1="113.34800000000001" x2="531.40625" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2323" x1="664.2578125" y1="113.34800000000001" x2="664.2578125" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2324" x1="797.109375" y1="113.34800000000001" x2="797.109375" y2="119.34800000000001" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2332" x1="0" y1="112.34800000000001" x2="929.9609375" y2="112.34800000000001" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine2331" x1="0" y1="1" x2="0" y2="112.34800000000001" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG2277" class="apexcharts-area-series apexcharts-plot-series"><g id="SvgjsG2278" class="apexcharts-series" seriesName="series1" data:longestSeries="true" rel="1" data:realIndex="0"><path id="SvgjsPath2285" d="M 0 112.34800000000001L 0 56.17400000000002C 46.498046875 56.17400000000002 86.353515625 11.234800000000021 132.8515625 11.234800000000021C 179.349609375 11.234800000000021 219.205078125 67.40880000000003 265.703125 67.40880000000003C 312.201171875 67.40880000000003 352.056640625 39.321800000000025 398.5546875 39.321800000000025C 445.052734375 39.321800000000025 484.908203125 89.87840000000003 531.40625 89.87840000000003C 577.904296875 89.87840000000003 617.759765625 67.40880000000003 664.2578125 67.40880000000003C 710.755859375 67.40880000000003 750.611328125 33.70440000000002 797.109375 33.70440000000002C 843.607421875 33.70440000000002 883.462890625 67.40880000000003 929.9609375 67.40880000000003C 929.9609375 67.40880000000003 929.9609375 67.40880000000003 929.9609375 112.34800000000001M 929.9609375 67.40880000000003z" fill="url(#SvgjsLinearGradient2281)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMasknekf70r8)" pathTo="M 0 112.34800000000001L 0 56.17400000000002C 46.498046875 56.17400000000002 86.353515625 11.234800000000021 132.8515625 11.234800000000021C 179.349609375 11.234800000000021 219.205078125 67.40880000000003 265.703125 67.40880000000003C 312.201171875 67.40880000000003 352.056640625 39.321800000000025 398.5546875 39.321800000000025C 445.052734375 39.321800000000025 484.908203125 89.87840000000003 531.40625 89.87840000000003C 577.904296875 89.87840000000003 617.759765625 67.40880000000003 664.2578125 67.40880000000003C 710.755859375 67.40880000000003 750.611328125 33.70440000000002 797.109375 33.70440000000002C 843.607421875 33.70440000000002 883.462890625 67.40880000000003 929.9609375 67.40880000000003C 929.9609375 67.40880000000003 929.9609375 67.40880000000003 929.9609375 112.34800000000001M 929.9609375 67.40880000000003z" pathFrom="M -1 134.81760000000003L -1 134.81760000000003L 132.8515625 134.81760000000003L 265.703125 134.81760000000003L 398.5546875 134.81760000000003L 531.40625 134.81760000000003L 664.2578125 134.81760000000003L 797.109375 134.81760000000003L 929.9609375 134.81760000000003"></path><path id="SvgjsPath2286" d="M 0 56.17400000000002C 46.498046875 56.17400000000002 86.353515625 11.234800000000021 132.8515625 11.234800000000021C 179.349609375 11.234800000000021 219.205078125 67.40880000000003 265.703125 67.40880000000003C 312.201171875 67.40880000000003 352.056640625 39.321800000000025 398.5546875 39.321800000000025C 445.052734375 39.321800000000025 484.908203125 89.87840000000003 531.40625 89.87840000000003C 577.904296875 89.87840000000003 617.759765625 67.40880000000003 664.2578125 67.40880000000003C 710.755859375 67.40880000000003 750.611328125 33.70440000000002 797.109375 33.70440000000002C 843.607421875 33.70440000000002 883.462890625 67.40880000000003 929.9609375 67.40880000000003" fill="none" fill-opacity="1" stroke="#ff7750" stroke-opacity="1" stroke-linecap="butt" stroke-width="4" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMasknekf70r8)" pathTo="M 0 56.17400000000002C 46.498046875 56.17400000000002 86.353515625 11.234800000000021 132.8515625 11.234800000000021C 179.349609375 11.234800000000021 219.205078125 67.40880000000003 265.703125 67.40880000000003C 312.201171875 67.40880000000003 352.056640625 39.321800000000025 398.5546875 39.321800000000025C 445.052734375 39.321800000000025 484.908203125 89.87840000000003 531.40625 89.87840000000003C 577.904296875 89.87840000000003 617.759765625 67.40880000000003 664.2578125 67.40880000000003C 710.755859375 67.40880000000003 750.611328125 33.70440000000002 797.109375 33.70440000000002C 843.607421875 33.70440000000002 883.462890625 67.40880000000003 929.9609375 67.40880000000003" pathFrom="M -1 134.81760000000003L -1 134.81760000000003L 132.8515625 134.81760000000003L 265.703125 134.81760000000003L 398.5546875 134.81760000000003L 531.40625 134.81760000000003L 664.2578125 134.81760000000003L 797.109375 134.81760000000003L 929.9609375 134.81760000000003"></path><g id="SvgjsG2279" class="apexcharts-series-markers-wrap"><g class="apexcharts-series-markers"><circle id="SvgjsCircle2338" r="0" cx="0" cy="56.17400000000002" class="apexcharts-marker w2zvb1r36i no-pointer-events" stroke="#ffffff" fill="#ff7750" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g><g id="SvgjsG2280" class="apexcharts-datalabels"></g></g></g><line id="SvgjsLine2333" x1="0" y1="0" x2="929.9609375" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine2334" x1="0" y1="0" x2="929.9609375" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG2335" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG2336" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG2337" class="apexcharts-point-annotations"></g></g><rect id="SvgjsRect2272" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect><g id="SvgjsG2306" class="apexcharts-yaxis" rel="0" transform="translate(5.359375, 0)"><g id="SvgjsG2307" class="apexcharts-yaxis-texts-g"><text id="SvgjsText2308" font-family="Helvetica, Arial, sans-serif" x="20" y="31.5" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">120</text><text id="SvgjsText2309" font-family="Helvetica, Arial, sans-serif" x="20" y="54.06960000000001" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">100</text><text id="SvgjsText2310" font-family="Helvetica, Arial, sans-serif" x="20" y="76.63920000000002" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">80</text><text id="SvgjsText2311" font-family="Helvetica, Arial, sans-serif" x="20" y="99.20880000000002" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">60</text><text id="SvgjsText2312" font-family="Helvetica, Arial, sans-serif" x="20" y="121.77840000000003" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">40</text><text id="SvgjsText2313" font-family="Helvetica, Arial, sans-serif" x="20" y="144.34800000000004" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">20</text></g><g id="SvgjsG2314" class="apexcharts-yaxis-title"><text id="SvgjsText2315" font-family="Helvetica, Arial, sans-serif" x="-16.359375" y="86.174" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-title-text " style="font-family: Helvetica, Arial, sans-serif;" transform="rotate(-90 0 0)"></text></g></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip light" style="left: 52.3594px; top: 65.1605px;"><div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">Jan</div><div class="apexcharts-tooltip-series-group active" style="display: flex;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(255, 119, 80);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label">series1: </span><span class="apexcharts-tooltip-text-value">70</span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div><div class="apexcharts-xaxistooltip apexcharts-xaxistooltip-bottom light" style="left: 17.5703px; top: 144.348px;"><div class="apexcharts-xaxistooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; min-width: 25.5781px;">Jan</div></div><div class="apexcharts-toolbar"><div class="apexcharts-menu-icon" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="apexcharts-menu"><div class="apexcharts-menu-item exportSVG" title="Download SVG">Download SVG</div><div class="apexcharts-menu-item exportPNG" title="Download PNG">Download PNG</div></div></div></div></div>
+                        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 1026px; height: 211px;"></div></div><div class="contract-trigger"></div></div></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-primary rounded background-image-overlap">
+                        <div class="iq-card-body">
+                           <div class="d-flex align-items-center mb-3">
+                              <div><img class="rounded" src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/38.png" alt=""></div>
+                              <h5 class="pl-3 text-white">Unauthorized Threats has been Terminated</h5>
+                           </div>
+                           <p class="mb-2"><span class="text-white">5</span> Unnecessary Data</p>
+                           <p class="mb-2"><span class="text-white">12</span> Undentified Source Data</p>
+                           <p class="mb-3"><span class="text-white">8</span> Unused Images</p>
+                           <button type="submit" class="btn w-100 btn-white mt-4 text-primary viwe-more">View More</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-8">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Bandwidth Public</h4>
+                           </div>
+                           <div class="mt-1">
+                              <div class="d-flex align-items-center justify-content-between">
+                                 <a href="javascript:void();" class="d-flex align-items-center mr-4">
+                                    <span class="bg-danger p-1 rounded mr-2"></span>
+                                    <p class="text-danger mb-0">Lowest Speed </p>
+                                 </a>
+                                 <a href="javascript:void();" class="d-flex align-items-center">
+                                    <span class="bg-primary p-1 rounded mr-2"></span>
+                                    <p class="text-primary mb-0">Highest Speed</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="iq-card-body" style="position: relative;">
+                           <div id="iq-income-chart" style="min-height: 245px;"><div id="apexcharts82kqfs69" class="apexcharts-canvas apexcharts82kqfs69 light" style="width: 985px; height: 230px;"><svg id="SvgjsSvg2179" width="985" height="230" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG2181" class="apexcharts-inner apexcharts-graphical" transform="translate(41.359375, 30)"><defs id="SvgjsDefs2180"><lineargradient id="SvgjsLinearGradient2185" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop2186" stop-opacity="0.4" stop-color="rgba(216,227,240,0.4)" offset="0"></stop><stop id="SvgjsStop2187" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop><stop id="SvgjsStop2188" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop></lineargradient><clippath id="gridRectMask82kqfs69"><rect id="SvgjsRect2190" width="945.640625" height="174.348" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><clippath id="gridRectMarkerMask82kqfs69"><rect id="SvgjsRect2191" width="945.640625" height="174.348" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath></defs><rect id="SvgjsRect2189" width="15.72734375" height="172.348" x="0" y="0" rx="0" ry="0" fill="url(#SvgjsLinearGradient2185)" opacity="1" stroke-width="0" stroke-dasharray="3" class="apexcharts-xcrosshairs" y2="172.348" filter="none" fill-opacity="0.9"></rect><g id="SvgjsG2216" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG2217" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"><text id="SvgjsText2218" font-family="Helvetica, Arial, sans-serif" x="67.40290178571429" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2219" style="font-family: Helvetica, Arial, sans-serif;">S</tspan><title>S</title></text><text id="SvgjsText2220" font-family="Helvetica, Arial, sans-serif" x="202.2087053571429" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2221" style="font-family: Helvetica, Arial, sans-serif;">M</tspan><title>M</title></text><text id="SvgjsText2222" font-family="Helvetica, Arial, sans-serif" x="337.0145089285715" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2223" style="font-family: Helvetica, Arial, sans-serif;">T</tspan><title>T</title></text><text id="SvgjsText2224" font-family="Helvetica, Arial, sans-serif" x="471.82031250000006" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2225" style="font-family: Helvetica, Arial, sans-serif;">W</tspan><title>W</title></text><text id="SvgjsText2226" font-family="Helvetica, Arial, sans-serif" x="606.6261160714286" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2227" style="font-family: Helvetica, Arial, sans-serif;">T</tspan><title>T</title></text><text id="SvgjsText2228" font-family="Helvetica, Arial, sans-serif" x="741.4319196428571" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2229" style="font-family: Helvetica, Arial, sans-serif;">F</tspan><title>F</title></text><text id="SvgjsText2230" font-family="Helvetica, Arial, sans-serif" x="876.2377232142857" y="201.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2231" style="font-family: Helvetica, Arial, sans-serif;">S</tspan><title>S</title></text></g><line id="SvgjsLine2232" x1="0" y1="173.348" x2="943.640625" y2="173.348" stroke="#78909c" stroke-dasharray="0" stroke-width="1"></line></g><g id="SvgjsG2242" class="apexcharts-grid"><g id="SvgjsG2243" class="apexcharts-gridlines-horizontal"><line id="SvgjsLine2251" x1="0" y1="0" x2="943.640625" y2="0" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2252" x1="0" y1="43.087" x2="943.640625" y2="43.087" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2253" x1="0" y1="86.174" x2="943.640625" y2="86.174" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2254" x1="0" y1="129.26100000000002" x2="943.640625" y2="129.26100000000002" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2255" x1="0" y1="172.348" x2="943.640625" y2="172.348" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line></g><g id="SvgjsG2244" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine2245" x1="134.80580357142858" y1="173.348" x2="134.80580357142858" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2246" x1="269.61160714285717" y1="173.348" x2="269.61160714285717" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2247" x1="404.4174107142858" y1="173.348" x2="404.4174107142858" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2248" x1="539.2232142857143" y1="173.348" x2="539.2232142857143" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2249" x1="674.0290178571429" y1="173.348" x2="674.0290178571429" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2250" x1="808.8348214285714" y1="173.348" x2="808.8348214285714" y2="179.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2257" x1="0" y1="172.348" x2="943.640625" y2="172.348" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine2256" x1="0" y1="1" x2="0" y2="172.348" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG2193" class="apexcharts-bar-series apexcharts-plot-series"><g id="SvgjsG2194" class="apexcharts-series" seriesName="LowestxSpeed" rel="1" data:realIndex="0"><path id="SvgjsPath2196" d="M 44.56080729166666 172.348L 44.56080729166666 140.03275000000002Q 51.424479166666664 134.16907812500003 58.288151041666666 140.03275000000002L 58.288151041666666 172.348L 43.56080729166666 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 44.56080729166666 172.348L 44.56080729166666 140.03275000000002Q 51.424479166666664 134.16907812500003 58.288151041666666 140.03275000000002L 58.288151041666666 172.348L 43.56080729166666 172.348" pathFrom="M 44.56080729166666 172.348L 44.56080729166666 172.348L 58.288151041666666 172.348L 58.288151041666666 172.348L 58.288151041666666 172.348L 43.56080729166666 172.348" cy="140.03275000000002" cx="148.40976562499998" j="0" val="30" barHeight="32.315250000000006" barWidth="15.72734375"></path><path id="SvgjsPath2197" d="M 149.40976562499998 172.348L 149.40976562499998 118.48925Q 156.27343749999997 112.625578125 163.13710937499997 118.48925L 163.13710937499997 172.348L 148.40976562499998 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 149.40976562499998 172.348L 149.40976562499998 118.48925Q 156.27343749999997 112.625578125 163.13710937499997 118.48925L 163.13710937499997 172.348L 148.40976562499998 172.348" pathFrom="M 149.40976562499998 172.348L 149.40976562499998 172.348L 163.13710937499997 172.348L 163.13710937499997 172.348L 163.13710937499997 172.348L 148.40976562499998 172.348" cy="118.48925" cx="253.2587239583333" j="1" val="50" barHeight="53.85875000000001" barWidth="15.72734375"></path><path id="SvgjsPath2198" d="M 254.2587239583333 172.348L 254.2587239583333 134.64687500000002Q 261.1223958333333 128.78320312500003 267.9860677083333 134.64687500000002L 267.9860677083333 172.348L 253.2587239583333 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 254.2587239583333 172.348L 254.2587239583333 134.64687500000002Q 261.1223958333333 128.78320312500003 267.9860677083333 134.64687500000002L 267.9860677083333 172.348L 253.2587239583333 172.348" pathFrom="M 254.2587239583333 172.348L 254.2587239583333 172.348L 267.9860677083333 172.348L 267.9860677083333 172.348L 267.9860677083333 172.348L 253.2587239583333 172.348" cy="134.64687500000002" cx="358.1076822916666" j="2" val="35" barHeight="37.701125000000005" barWidth="15.72734375"></path><path id="SvgjsPath2199" d="M 359.1076822916666 172.348L 359.1076822916666 107.7175Q 365.97135416666663 101.853828125 372.8350260416666 107.7175L 372.8350260416666 172.348L 358.1076822916666 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 359.1076822916666 172.348L 359.1076822916666 107.7175Q 365.97135416666663 101.853828125 372.8350260416666 107.7175L 372.8350260416666 172.348L 358.1076822916666 172.348" pathFrom="M 359.1076822916666 172.348L 359.1076822916666 172.348L 372.8350260416666 172.348L 372.8350260416666 172.348L 372.8350260416666 172.348L 358.1076822916666 172.348" cy="107.7175" cx="462.9566406249999" j="3" val="60" barHeight="64.63050000000001" barWidth="15.72734375"></path><path id="SvgjsPath2200" d="M 463.9566406249999 172.348L 463.9566406249999 129.26100000000002Q 470.82031249999994 123.39732812500003 477.6839843749999 129.26100000000002L 477.6839843749999 172.348L 462.9566406249999 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 463.9566406249999 172.348L 463.9566406249999 129.26100000000002Q 470.82031249999994 123.39732812500003 477.6839843749999 129.26100000000002L 477.6839843749999 172.348L 462.9566406249999 172.348" pathFrom="M 463.9566406249999 172.348L 463.9566406249999 172.348L 477.6839843749999 172.348L 477.6839843749999 172.348L 477.6839843749999 172.348L 462.9566406249999 172.348" cy="129.26100000000002" cx="567.8055989583332" j="4" val="40" barHeight="43.087" barWidth="15.72734375"></path><path id="SvgjsPath2201" d="M 568.8055989583332 172.348L 568.8055989583332 107.7175Q 575.6692708333333 101.853828125 582.5329427083333 107.7175L 582.5329427083333 172.348L 567.8055989583332 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 568.8055989583332 172.348L 568.8055989583332 107.7175Q 575.6692708333333 101.853828125 582.5329427083333 107.7175L 582.5329427083333 172.348L 567.8055989583332 172.348" pathFrom="M 568.8055989583332 172.348L 568.8055989583332 172.348L 582.5329427083333 172.348L 582.5329427083333 172.348L 582.5329427083333 172.348L 567.8055989583332 172.348" cy="107.7175" cx="672.6545572916666" j="5" val="60" barHeight="64.63050000000001" barWidth="15.72734375"></path><path id="SvgjsPath2202" d="M 673.6545572916666 172.348L 673.6545572916666 107.7175Q 680.5182291666666 101.853828125 687.3819010416667 107.7175L 687.3819010416667 172.348L 672.6545572916666 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 673.6545572916666 172.348L 673.6545572916666 107.7175Q 680.5182291666666 101.853828125 687.3819010416667 107.7175L 687.3819010416667 172.348L 672.6545572916666 172.348" pathFrom="M 673.6545572916666 172.348L 673.6545572916666 172.348L 687.3819010416667 172.348L 687.3819010416667 172.348L 687.3819010416667 172.348L 672.6545572916666 172.348" cy="107.7175" cx="777.503515625" j="6" val="60" barHeight="64.63050000000001" barWidth="15.72734375"></path><path id="SvgjsPath2203" d="M 778.503515625 172.348L 778.503515625 129.26100000000002Q 785.3671875 123.39732812500003 792.230859375 129.26100000000002L 792.230859375 172.348L 777.503515625 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 778.503515625 172.348L 778.503515625 129.26100000000002Q 785.3671875 123.39732812500003 792.230859375 129.26100000000002L 792.230859375 172.348L 777.503515625 172.348" pathFrom="M 778.503515625 172.348L 778.503515625 172.348L 792.230859375 172.348L 792.230859375 172.348L 792.230859375 172.348L 777.503515625 172.348" cy="129.26100000000002" cx="882.3524739583333" j="7" val="40" barHeight="43.087" barWidth="15.72734375"></path><path id="SvgjsPath2204" d="M 883.3524739583333 172.348L 883.3524739583333 118.48925Q 890.2161458333334 112.625578125 897.0798177083334 118.48925L 897.0798177083334 172.348L 882.3524739583333 172.348" fill="rgba(255,119,80,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 883.3524739583333 172.348L 883.3524739583333 118.48925Q 890.2161458333334 112.625578125 897.0798177083334 118.48925L 897.0798177083334 172.348L 882.3524739583333 172.348" pathFrom="M 883.3524739583333 172.348L 883.3524739583333 172.348L 897.0798177083334 172.348L 897.0798177083334 172.348L 897.0798177083334 172.348L 882.3524739583333 172.348" cy="118.48925" cx="987.2014322916667" j="8" val="50" barHeight="53.85875000000001" barWidth="15.72734375"></path><g id="SvgjsG2195" class="apexcharts-datalabels"></g></g><g id="SvgjsG2205" class="apexcharts-series" seriesName="HighestxSpeed" rel="2" data:realIndex="1"><path id="SvgjsPath2207" d="M 44.56080729166666 140.03275000000002L 44.56080729166666 96.94575000000002Q 51.424479166666664 91.08207812500002 58.288151041666666 96.94575000000002L 58.288151041666666 140.03275000000002L 43.56080729166666 140.03275000000002" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 44.56080729166666 140.03275000000002L 44.56080729166666 96.94575000000002Q 51.424479166666664 91.08207812500002 58.288151041666666 96.94575000000002L 58.288151041666666 140.03275000000002L 43.56080729166666 140.03275000000002" pathFrom="M 44.56080729166666 140.03275000000002L 44.56080729166666 140.03275000000002L 58.288151041666666 140.03275000000002L 58.288151041666666 140.03275000000002L 58.288151041666666 140.03275000000002L 43.56080729166666 140.03275000000002" cy="96.94575000000002" cx="148.40976562499998" j="0" val="40" barHeight="43.087" barWidth="15.72734375"></path><path id="SvgjsPath2208" d="M 149.40976562499998 118.48925L 149.40976562499998 64.63049999999998Q 156.27343749999997 58.76682812499998 163.13710937499997 64.63049999999998L 163.13710937499997 118.48925L 148.40976562499998 118.48925" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 149.40976562499998 118.48925L 149.40976562499998 64.63049999999998Q 156.27343749999997 58.76682812499998 163.13710937499997 64.63049999999998L 163.13710937499997 118.48925L 148.40976562499998 118.48925" pathFrom="M 149.40976562499998 118.48925L 149.40976562499998 118.48925L 163.13710937499997 118.48925L 163.13710937499997 118.48925L 163.13710937499997 118.48925L 148.40976562499998 118.48925" cy="64.63049999999998" cx="253.2587239583333" j="1" val="50" barHeight="53.85875000000001" barWidth="15.72734375"></path><path id="SvgjsPath2209" d="M 254.2587239583333 134.64687500000002L 254.2587239583333 75.40225000000001Q 261.1223958333333 69.53857812500002 267.9860677083333 75.40225000000001L 267.9860677083333 134.64687500000002L 253.2587239583333 134.64687500000002" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 254.2587239583333 134.64687500000002L 254.2587239583333 75.40225000000001Q 261.1223958333333 69.53857812500002 267.9860677083333 75.40225000000001L 267.9860677083333 134.64687500000002L 253.2587239583333 134.64687500000002" pathFrom="M 254.2587239583333 134.64687500000002L 254.2587239583333 134.64687500000002L 267.9860677083333 134.64687500000002L 267.9860677083333 134.64687500000002L 267.9860677083333 134.64687500000002L 253.2587239583333 134.64687500000002" cy="75.40225000000001" cx="358.1076822916666" j="2" val="55" barHeight="59.244625000000006" barWidth="15.72734375"></path><path id="SvgjsPath2210" d="M 359.1076822916666 107.7175L 359.1076822916666 53.85874999999999Q 365.97135416666663 47.99507812499999 372.8350260416666 53.85874999999999L 372.8350260416666 107.7175L 358.1076822916666 107.7175" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 359.1076822916666 107.7175L 359.1076822916666 53.85874999999999Q 365.97135416666663 47.99507812499999 372.8350260416666 53.85874999999999L 372.8350260416666 107.7175L 358.1076822916666 107.7175" pathFrom="M 359.1076822916666 107.7175L 359.1076822916666 107.7175L 372.8350260416666 107.7175L 372.8350260416666 107.7175L 372.8350260416666 107.7175L 358.1076822916666 107.7175" cy="53.85874999999999" cx="462.9566406249999" j="3" val="50" barHeight="53.85875000000001" barWidth="15.72734375"></path><path id="SvgjsPath2211" d="M 463.9566406249999 129.26100000000002L 463.9566406249999 96.94575000000002Q 470.82031249999994 91.08207812500002 477.6839843749999 96.94575000000002L 477.6839843749999 129.26100000000002L 462.9566406249999 129.26100000000002" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 463.9566406249999 129.26100000000002L 463.9566406249999 96.94575000000002Q 470.82031249999994 91.08207812500002 477.6839843749999 96.94575000000002L 477.6839843749999 129.26100000000002L 462.9566406249999 129.26100000000002" pathFrom="M 463.9566406249999 129.26100000000002L 463.9566406249999 129.26100000000002L 477.6839843749999 129.26100000000002L 477.6839843749999 129.26100000000002L 477.6839843749999 129.26100000000002L 462.9566406249999 129.26100000000002" cy="96.94575000000002" cx="567.8055989583332" j="4" val="30" barHeight="32.315250000000006" barWidth="15.72734375"></path><path id="SvgjsPath2212" d="M 568.8055989583332 107.7175L 568.8055989583332 21.543499999999995Q 575.6692708333333 15.679828124999995 582.5329427083333 21.543499999999995L 582.5329427083333 107.7175L 567.8055989583332 107.7175" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 568.8055989583332 107.7175L 568.8055989583332 21.543499999999995Q 575.6692708333333 15.679828124999995 582.5329427083333 21.543499999999995L 582.5329427083333 107.7175L 567.8055989583332 107.7175" pathFrom="M 568.8055989583332 107.7175L 568.8055989583332 107.7175L 582.5329427083333 107.7175L 582.5329427083333 107.7175L 582.5329427083333 107.7175L 567.8055989583332 107.7175" cy="21.543499999999995" cx="672.6545572916666" j="5" val="80" barHeight="86.174" barWidth="15.72734375"></path><path id="SvgjsPath2213" d="M 673.6545572916666 107.7175L 673.6545572916666 75.40225Q 680.5182291666666 69.538578125 687.3819010416667 75.40225L 687.3819010416667 107.7175L 672.6545572916666 107.7175" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 673.6545572916666 107.7175L 673.6545572916666 75.40225Q 680.5182291666666 69.538578125 687.3819010416667 75.40225L 687.3819010416667 107.7175L 672.6545572916666 107.7175" pathFrom="M 673.6545572916666 107.7175L 673.6545572916666 107.7175L 687.3819010416667 107.7175L 687.3819010416667 107.7175L 687.3819010416667 107.7175L 672.6545572916666 107.7175" cy="75.40225" cx="777.503515625" j="6" val="30" barHeight="32.315250000000006" barWidth="15.72734375"></path><path id="SvgjsPath2214" d="M 778.503515625 129.26100000000002L 778.503515625 102.33162500000002Q 785.3671875 96.46795312500002 792.230859375 102.33162500000002L 792.230859375 129.26100000000002L 777.503515625 129.26100000000002" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 778.503515625 129.26100000000002L 778.503515625 102.33162500000002Q 785.3671875 96.46795312500002 792.230859375 102.33162500000002L 792.230859375 129.26100000000002L 777.503515625 129.26100000000002" pathFrom="M 778.503515625 129.26100000000002L 778.503515625 129.26100000000002L 792.230859375 129.26100000000002L 792.230859375 129.26100000000002L 792.230859375 129.26100000000002L 777.503515625 129.26100000000002" cy="102.33162500000002" cx="882.3524739583333" j="7" val="25" barHeight="26.929375000000004" barWidth="15.72734375"></path><path id="SvgjsPath2215" d="M 883.3524739583333 118.48925L 883.3524739583333 45.24134999999998Q 890.2161458333334 39.37767812499998 897.0798177083334 45.24134999999998L 897.0798177083334 118.48925L 882.3524739583333 118.48925" fill="rgba(78,55,178,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMask82kqfs69)" pathTo="M 883.3524739583333 118.48925L 883.3524739583333 45.24134999999998Q 890.2161458333334 39.37767812499998 897.0798177083334 45.24134999999998L 897.0798177083334 118.48925L 882.3524739583333 118.48925" pathFrom="M 883.3524739583333 118.48925L 883.3524739583333 118.48925L 897.0798177083334 118.48925L 897.0798177083334 118.48925L 897.0798177083334 118.48925L 882.3524739583333 118.48925" cy="45.24134999999998" cx="987.2014322916667" j="8" val="68" barHeight="73.24790000000002" barWidth="15.72734375"></path><g id="SvgjsG2206" class="apexcharts-datalabels"></g></g></g><line id="SvgjsLine2258" x1="0" y1="0" x2="943.640625" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine2259" x1="0" y1="0" x2="943.640625" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG2260" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG2261" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG2262" class="apexcharts-point-annotations"></g></g><g id="SvgjsG2233" class="apexcharts-yaxis" rel="0" transform="translate(5.359375, 0)"><g id="SvgjsG2234" class="apexcharts-yaxis-texts-g"><text id="SvgjsText2235" font-family="Helvetica, Arial, sans-serif" x="20" y="31.4" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">160</text><text id="SvgjsText2236" font-family="Helvetica, Arial, sans-serif" x="20" y="74.58700000000002" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">120</text><text id="SvgjsText2237" font-family="Helvetica, Arial, sans-serif" x="20" y="117.77400000000003" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">80</text><text id="SvgjsText2238" font-family="Helvetica, Arial, sans-serif" x="20" y="160.96100000000004" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">40</text><text id="SvgjsText2239" font-family="Helvetica, Arial, sans-serif" x="20" y="204.14800000000005" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">0</text></g><g id="SvgjsG2240" class="apexcharts-yaxis-title"><text id="SvgjsText2241" font-family="Helvetica, Arial, sans-serif" x="-16.359375" y="116.174" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-title-text " style="font-family: Helvetica, Arial, sans-serif;" transform="rotate(-90 0 0)"></text></g></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip light"><div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(255, 119, 80);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(78, 55, 178);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div><div class="apexcharts-toolbar"><div class="apexcharts-menu-icon" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="apexcharts-menu"><div class="apexcharts-menu-item exportSVG" title="Download SVG">Download SVG</div><div class="apexcharts-menu-item exportPNG" title="Download PNG">Download PNG</div></div></div></div></div>
+                        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 1026px; height: 275px;"></div></div><div class="contract-trigger"></div></div></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="iq-card">
+                        <div class="iq-card-body box iq-box-relative rounded">
+                           <div class="d-flex align-items-center">
+                              <div class="float-left progress-round income-progress disk-usage" data-value="80">
+                                 <span class="progress-left">
+                                 <span class="progress-bar border-success" style="transform: rotate(108deg);"></span>
+                                 </span>
+                                 <span class="progress-right">
+                                 <span class="progress-bar border-primary" style="transform: rotate(180deg);"></span>
+                                 </span>
+                              </div>
+                              <div class="pl-3">
+                                 <h5 class="d-block mt-0 mb-1 text-black">Disk Usage</h5>
+                                 <ul class="float-right d-inline-block p-0 m-0 list-inline">
+                                    <li class="line-height-3">
+                                       <span class="text-danger total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                       <span class="bg-danger rounded"></span>Max Usage</span>
+                                    </li>
+                                    <li class="line-height-3">
+                                       <span class="text-primary total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                       <span class="bg-primary rounded"></span>Average Usage</span>
+                                    </li>
+                                    <li class="line-height-3">
+                                       <span class="text-success total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                       <span class="bg-success rounded"></span>Minimum Usage</span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Load Average</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body p-0" style="position: relative;">
+                           <div id="chart-9" style="min-height: 112px;"><div id="apexchartsb0d00ufe" class="apexcharts-canvas apexchartsb0d00ufe light" style="width: 497px; height: 112px;"><svg id="SvgjsSvg3279" width="497" height="112" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG3281" class="apexcharts-inner apexcharts-graphical" transform="translate(0, 0)"><defs id="SvgjsDefs3280"><clippath id="gridRectMaskb0d00ufe"><rect id="SvgjsRect3295" width="500" height="115" x="-1.5" y="-1.5" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><clippath id="gridRectMarkerMaskb0d00ufe"><rect id="SvgjsRect3296" width="499" height="114" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><lineargradient id="SvgjsLinearGradient3302" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop3303" stop-opacity="0.1" stop-color="rgba(153,153,153,0.1)" offset="0"></stop><stop id="SvgjsStop3304" stop-opacity="0" stop-color="rgba(153,153,153,0)" offset="1"></stop><stop id="SvgjsStop3305" stop-opacity="0" stop-color="rgba(153,153,153,0)" offset="1"></stop></lineargradient></defs><line id="SvgjsLine3284" x1="0" y1="0" x2="0" y2="112" stroke="#b6b6b6" stroke-dasharray="3" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="112" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line><g id="SvgjsG3308" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG3309" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"></g></g><g id="SvgjsG3312" class="apexcharts-grid"><line id="SvgjsLine3314" x1="0" y1="112" x2="497" y2="112" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine3313" x1="0" y1="1" x2="0" y2="112" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG3298" class="apexcharts-area-series apexcharts-plot-series"><g id="SvgjsG3299" class="apexcharts-series" seriesName="seriesx1" data:longestSeries="true" rel="1" data:realIndex="0"><path id="SvgjsPath3306" d="M -55.22222222222222 112L -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 51.52 -55.22222222222222 51.52C -35.894444444444446 51.52 -19.327777777777776 84 0 84C 19.327777777777776 84 35.894444444444446 43.68000000000001 55.22222222222222 43.68000000000001C 74.55 43.68000000000001 91.11666666666667 98.56 110.44444444444444 98.56C 129.77222222222224 98.56 146.3388888888889 51.52 165.66666666666669 51.52C 184.99444444444447 51.52 201.56111111111113 72.80000000000001 220.88888888888889 72.80000000000001C 240.21666666666667 72.80000000000001 256.78333333333336 30.24000000000001 276.11111111111114 30.24000000000001C 295.4388888888889 30.24000000000001 312.0055555555556 25.760000000000005 331.33333333333337 25.760000000000005C 350.66111111111115 25.760000000000005 367.2277777777778 97.44 386.5555555555556 97.44C 405.8833333333334 97.44 422.45 29.120000000000005 441.77777777777777 29.120000000000005C 461.10555555555555 29.120000000000005 477.6722222222222 32.480000000000004 497 32.480000000000004C 497 32.480000000000004 497 32.480000000000004 497 112M 497 32.480000000000004z" fill="url(#SvgjsLinearGradient3302)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMaskb0d00ufe)" pathTo="M -55.22222222222222 112L -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 84 -55.22222222222222 84C -35.894444444444446 84 -19.327777777777776 43.68000000000001 0 43.68000000000001C 19.327777777777776 43.68000000000001 35.894444444444446 98.56 55.22222222222222 98.56C 74.55 98.56 91.11666666666667 51.52 110.44444444444444 51.52C 129.77222222222224 51.52 146.3388888888889 72.80000000000001 165.66666666666669 72.80000000000001C 184.99444444444447 72.80000000000001 201.56111111111113 30.24000000000001 220.88888888888889 30.24000000000001C 240.21666666666667 30.24000000000001 256.78333333333336 25.760000000000005 276.11111111111114 25.760000000000005C 295.4388888888889 25.760000000000005 312.0055555555556 97.44 331.33333333333337 97.44C 350.66111111111115 97.44 367.2277777777778 29.120000000000005 386.5555555555556 29.120000000000005C 405.8833333333334 29.120000000000005 422.45 32.480000000000004 441.77777777777777 32.480000000000004C 461.10555555555555 32.480000000000004 477.6722222222222 12.320000000000007 497 12.320000000000007C 497 12.320000000000007 497 12.320000000000007 497 112M 497 12.320000000000007z" pathFrom="M -55.22222222222222 112L -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 51.52 -55.22222222222222 51.52C -35.894444444444446 51.52 -19.327777777777776 84 0 84C 19.327777777777776 84 35.894444444444446 43.68000000000001 55.22222222222222 43.68000000000001C 74.55 43.68000000000001 91.11666666666667 98.56 110.44444444444444 98.56C 129.77222222222224 98.56 146.3388888888889 51.52 165.66666666666669 51.52C 184.99444444444447 51.52 201.56111111111113 72.80000000000001 220.88888888888889 72.80000000000001C 240.21666666666667 72.80000000000001 256.78333333333336 30.24000000000001 276.11111111111114 30.24000000000001C 295.4388888888889 30.24000000000001 312.0055555555556 25.760000000000005 331.33333333333337 25.760000000000005C 350.66111111111115 25.760000000000005 367.2277777777778 97.44 386.5555555555556 97.44C 405.8833333333334 97.44 422.45 29.120000000000005 441.77777777777777 29.120000000000005C 461.10555555555555 29.120000000000005 477.6722222222222 32.480000000000004 497 32.480000000000004C 497 32.480000000000004 497 32.480000000000004 497 112M 497 32.480000000000004z"></path><path id="SvgjsPath3307" d="M -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 51.52 -55.22222222222222 51.52C -35.894444444444446 51.52 -19.327777777777776 84 0 84C 19.327777777777776 84 35.894444444444446 43.68000000000001 55.22222222222222 43.68000000000001C 74.55 43.68000000000001 91.11666666666667 98.56 110.44444444444444 98.56C 129.77222222222224 98.56 146.3388888888889 51.52 165.66666666666669 51.52C 184.99444444444447 51.52 201.56111111111113 72.80000000000001 220.88888888888889 72.80000000000001C 240.21666666666667 72.80000000000001 256.78333333333336 30.24000000000001 276.11111111111114 30.24000000000001C 295.4388888888889 30.24000000000001 312.0055555555556 25.760000000000005 331.33333333333337 25.760000000000005C 350.66111111111115 25.760000000000005 367.2277777777778 97.44 386.5555555555556 97.44C 405.8833333333334 97.44 422.45 29.120000000000005 441.77777777777777 29.120000000000005C 461.10555555555555 29.120000000000005 477.6722222222222 32.480000000000004 497 32.480000000000004" fill="none" fill-opacity="1" stroke="var(--iq-danger)" stroke-opacity="1" stroke-linecap="butt" stroke-width="3" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMaskb0d00ufe)" pathTo="M -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 84 -55.22222222222222 84C -35.894444444444446 84 -19.327777777777776 43.68000000000001 0 43.68000000000001C 19.327777777777776 43.68000000000001 35.894444444444446 98.56 55.22222222222222 98.56C 74.55 98.56 91.11666666666667 51.52 110.44444444444444 51.52C 129.77222222222224 51.52 146.3388888888889 72.80000000000001 165.66666666666669 72.80000000000001C 184.99444444444447 72.80000000000001 201.56111111111113 30.24000000000001 220.88888888888889 30.24000000000001C 240.21666666666667 30.24000000000001 256.78333333333336 25.760000000000005 276.11111111111114 25.760000000000005C 295.4388888888889 25.760000000000005 312.0055555555556 97.44 331.33333333333337 97.44C 350.66111111111115 97.44 367.2277777777778 29.120000000000005 386.5555555555556 29.120000000000005C 405.8833333333334 29.120000000000005 422.45 32.480000000000004 441.77777777777777 32.480000000000004C 461.10555555555555 32.480000000000004 477.6722222222222 12.320000000000007 497 12.320000000000007" pathFrom="M -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 112 -55.22222222222222 112C -55.22222222222222 112 -55.22222222222222 51.52 -55.22222222222222 51.52C -35.894444444444446 51.52 -19.327777777777776 84 0 84C 19.327777777777776 84 35.894444444444446 43.68000000000001 55.22222222222222 43.68000000000001C 74.55 43.68000000000001 91.11666666666667 98.56 110.44444444444444 98.56C 129.77222222222224 98.56 146.3388888888889 51.52 165.66666666666669 51.52C 184.99444444444447 51.52 201.56111111111113 72.80000000000001 220.88888888888889 72.80000000000001C 240.21666666666667 72.80000000000001 256.78333333333336 30.24000000000001 276.11111111111114 30.24000000000001C 295.4388888888889 30.24000000000001 312.0055555555556 25.760000000000005 331.33333333333337 25.760000000000005C 350.66111111111115 25.760000000000005 367.2277777777778 97.44 386.5555555555556 97.44C 405.8833333333334 97.44 422.45 29.120000000000005 441.77777777777777 29.120000000000005C 461.10555555555555 29.120000000000005 477.6722222222222 32.480000000000004 497 32.480000000000004"></path><g id="SvgjsG3300" class="apexcharts-series-markers-wrap"><g class="apexcharts-series-markers"><circle id="SvgjsCircle3320" r="0" cx="0" cy="0" class="apexcharts-marker whm68e7gn no-pointer-events" stroke="#ffffff" fill="var(--iq-danger)" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g><g id="SvgjsG3301" class="apexcharts-datalabels"></g></g></g><line id="SvgjsLine3315" x1="0" y1="0" x2="497" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine3316" x1="0" y1="0" x2="497" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG3317" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG3318" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG3319" class="apexcharts-point-annotations"></g></g><rect id="SvgjsRect3283" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect><g id="SvgjsG3310" class="apexcharts-yaxis" rel="0" transform="translate(-21, 0)"><g id="SvgjsG3311" class="apexcharts-yaxis-texts-g"></g></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip light"><div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: var(--iq-danger);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
+                        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 498px; height: 113px;"></div></div><div class="contract-trigger"></div></div></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 row m-0 p-0">
+                     <div class="col-sm-6">
+                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                           <div class="iq-card-header d-flex justify-content-between">
+                              <div class="iq-header-title">
+                                 <h4 class="card-title">CPU Daily Usage</h4>
+                              </div>
+                           </div>
+                           <div class="iq-card-body pt-0">
+                              <div id="home-chart-11" style="position: relative;"><div dir="ltr" class="resize-sensor" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div class="resize-sensor-expand" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 336px; height: 160px;"></div></div><div class="resize-sensor-shrink" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 200%; height: 200%;"></div></div></div><div style="width: 100%; height: 100%; position: relative; top: 0.046875px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" style="width: 100%; height: 100%; overflow: visible;"><desc>JavaScript chart by amCharts</desc><defs><clippath id="id-51"><rect width="326" height="150"></rect></clippath><lineargradient id="gradient-id-74" x1="1%" x2="99%" y1="59%" y2="41%"><stop stop-color="#474758" offset="0"></stop><stop stop-color="#474758" stop-opacity="1" offset="0.75"></stop><stop stop-color="#3cabff" stop-opacity="1" offset="0.755"></stop></lineargradient><filter id="filter-id-83" width="200%" height="200%" x="-50%" y="-50%"></filter><filter id="filter-id-104" width="200%" height="200%" x="-50%" y="-50%"></filter><clippath id="id-155"><path d=" M-78.72,0  L-96,0  a96,96,0,0,1,192,0 L78.72,0  a78.72,78.72,0,0,0,-157.44,0 L-78.72,0 " r="0"></path></clippath><filter id="filter-id-56" width="200%" height="200%" x="-50%" y="-50%"><fegaussianblur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></fegaussianblur><feoffset result="offsetBlur" dx="1" dy="1"></feoffset><feflood flood-color="#000000" flood-opacity="0.5"></feflood><fecomposite in2="offsetBlur" operator="in"></fecomposite><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter><filter id="filter-id-71" width="120%" height="120%" x="-10%" y="-10%"><fecolormatrix type="saturate" values="0"></fecolormatrix></filter></defs><g><g fill="#ffffff" fill-opacity="0"><rect width="326" height="150"></rect></g><g><g role="region" clip-path="url(&quot;#id-51&quot;)" opacity="1" aria-describedby="id-22-description"><g transform="translate(15,15)"><g><g><g><g><g><g><g transform="translate(0,0)"><g fill="#ffffff" fill-opacity="0" transform="translate(0,0)"><rect width="296" height="120"></rect></g><g><g transform="translate(148,108)"><g><g opacity="0"></g><g><g></g></g><g aria-hidden="true"><g><g><g><g><g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1" display="none"><path d=" M-62.1325,45.1419  L-70.2227,51.0198 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1" display="none"><path d=" M-73.0411,23.7325  L-82.5517,26.8227 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-76.8,0  L-86.8,0 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-73.0411,-23.7325  L-82.5517,-26.8227 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-62.1325,-45.1419  L-70.2227,-51.0198 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-45.1419,-62.1325  L-51.0198,-70.2227 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-23.7325,-73.0411  L-26.8227,-82.5517 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M0,-76.8  L0,-86.8 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M23.7325,-73.0411  L26.8227,-82.5517 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M45.1419,-62.1325  L51.0198,-70.2227 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M62.1325,-45.1419  L70.2227,-51.0198 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M73.0411,-23.7325  L82.5517,-26.8227 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M76.8,0  L86.8,0 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1" display="none"><path d=" M73.0411,23.7325  L82.5517,26.8227 "></path></g></g></g><g fill="#000000" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" transform="translate(-100.8,0)"><g style="user-select: none;" transform="translate(-4,-10)"><text x="0" y="20" dy="-5.4"><tspan>L</tspan></text></g></g><g fill="#000000" transform="translate(-89.63900000000001,62.776)" display="none"><g transform="translate(-14,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>-20</tspan></text></g></g><g fill="#000000" transform="translate(-103.475,33.003)" display="none"><g transform="translate(-12,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>-10</tspan></text></g></g><g fill="#000000" transform="translate(-101.8,0)"><g transform="translate(-5,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>0</tspan></text></g></g><g fill="#000000" transform="translate(-99.67,-33.003)"><g transform="translate(-8,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>10</tspan></text></g></g><g fill="#000000" transform="translate(-85.999,-62.776)"><g transform="translate(-9.5,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>20</tspan></text></g></g><g fill="#000000" transform="translate(-62.776,-86.403)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>30</tspan></text></g></g><g fill="#000000" transform="translate(-33.003,-101.573)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>40</tspan></text></g></g><g fill="#000000" transform="translate(0,-106.8)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>50</tspan></text></g></g><g fill="#000000" transform="translate(33.003,-101.573)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>60</tspan></text></g></g><g fill="#000000" transform="translate(62.482,-86.403)"><g transform="translate(-9.5,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>70</tspan></text></g></g><g fill="#000000" transform="translate(86.403,-62.776)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>80</tspan></text></g></g><g fill="#000000" transform="translate(101.573,-33.003)"><g transform="translate(-10,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>90</tspan></text></g></g><g fill="#000000" transform="translate(109.8,0)"><g transform="translate(-13,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>100</tspan></text></g></g><g fill="#000000" transform="translate(102.048,33.003)" display="none"><g transform="translate(-10.5,-10)" style="user-select: none;"><text x="0" y="20" dy="-5.4"><tspan>110</tspan></text></g></g><g><g></g></g></g></g><g fill="#000000"><g display="none"></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M-76.8,0  a76.80000000000001,76.80000000000001,0,0,1,153.6,0" transform="translate(-0.5,-0.5)"></path></g></g></g><g><g></g></g><g aria-hidden="true"><g><g><g><g><g><g fill="#4e37b2" fill-opacity="1" style="pointer-events: none;"><path d=" M-78.72,0  L-96,0  a96,96,0,0,1,147.7403,-80.8637 L42.4271,-66.3082  a78.72,78.72,0,0,0,-121.1471,66.3082 L-78.72,0 "></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M-78.72,0  L-96,0 "></path></g><g fill="#ff7750" fill-opacity="1" style="pointer-events: none;"><path d=" M42.4271,-66.3082  L51.7403,-80.8637  a96,96,0,0,1,44.2597,80.8637 L78.72,0  a78.72,78.72,0,0,0,-36.2929,-66.3082 L42.4271,-66.3082 "></path></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path d=" M42.4275,-66.308  L51.7408,-80.8634 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M-96,0  L-101,0 "></path></g><g fill-opacity="0" stroke-opacity="0" stroke="#000000" stroke-width="1"><path d=" M51.7408,-80.8634  L54.4357,-85.075 "></path></g></g></g><g fill="#000000" fill-opacity="0" opacity="0" stroke-opacity="0" style="pointer-events: none;" display="none" transform="translate(-115,0)"><g style="user-select: none;" transform="translate(-4,-10)"><text x="0" y="20" dy="-5.4"><tspan>L</tspan></text></g></g><g fill="#000000" transform="translate(-111,0)"><g display="none"></g></g><g fill="#000000" transform="translate(59.825,-93.499)"><g display="none"></g></g><g fill="#000000" stroke="#000000" transform="translate(0,0) rotate(300.447)"><g><g display="none"><circle></circle></g><g transform="translate(19.2,-5)"><path d=" M0,0  L76.8,4.5  L76.8,5.5  L0,10 "></path></g></g></g><g><g></g></g></g></g><g fill="#000000"><g display="none"></g></g><g stroke="#000000" stroke-opacity="0.15" fill="none"><path transform="translate(-0.5,-0.5)"></path></g><g stroke="#000000" stroke-opacity="0" fill="none" style="pointer-events: none;"><path d=" M-96,0  a96,96,0,0,1,192,0" transform="translate(-0.5,-0.5)"></path></g></g></g><g fill="#000000" font-size="0"><g transform="translate(-1.5,0)" style="user-select: none;"><text x="0" y="0" dy="0"><tspan>NaN</tspan></text></g></g><g><g></g></g><g clip-path="url(&quot;#id-155&quot;)"><g></g></g></g></g><g><g></g></g><g role="button" focusable="true" opacity="0" visibility="hidden" aria-hidden="true" transform="translate(256,-3)" aria-labelledby="id-37-title"><g fill="#6794dc" stroke="#ffffff" fill-opacity="1" stroke-opacity="0" transform="translate(0,8)"><path d="M17,0 L18,0 a17,17 0 0 1 17,17 L35,17 a17,17 0 0 1 -17,17 L17,34 a17,17 0 0 1 -17,-17 L0,17 a17,17 0 0 1 17,-17 Z"></path></g><g transform="translate(9,9)"><g stroke="#ffffff" style="pointer-events: none;" transform="translate(0,8)"><path d=" M0,0  L11,0 " transform="translate(2.5,7.5)"></path></g><g fill="#000000" style="pointer-events: none;" transform="translate(17,8)"><g display="none"></g></g></g><title id="id-37-title">Zoom Out</title></g></g></g><g><g></g></g><g transform="translate(296,0)"><g></g></g></g></g><g><g></g></g><g transform="translate(0,120)"><g></g></g></g></g></g></g></g><desc id="id-22-description">Chart</desc></g><g><g><g role="tooltip" visibility="hidden" opacity="0"><g fill="#ffffff" fill-opacity="0.9" stroke-width="1" stroke-opacity="1" stroke="#ffffff" filter="url(&quot;#filter-id-56&quot;)" style="pointer-events: none;" transform="translate(0,6)"><path d="M3,0 L3,0 L0,-6 L13,0 L21,0 a3,3 0 0 1 3,3 L24,8 a3,3 0 0 1 -3,3 L3,11 a3,3 0 0 1 -3,-3 L0,3 a3,3 0 0 1 3,-3"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(12,6)"><g transform="translate(0,7)" display="none"></g></g></g></g><g visibility="hidden" display="none"><g fill="#ffffff" opacity="1"><rect width="326" height="150"></rect></g><g><g><g><g stroke-opacity="1" fill="#f3f3f3" fill-opacity="0.8"><g><g><path d=" M53,0  a53,53,0,0,1,-106,0 a53,53,0,0,1,106,0 M42,0  a42,42,0,0,0,-84,0 a42,42,0,0,0,84,0 L42,0 "></path></g></g></g><g stroke-opacity="1" fill="#000000" fill-opacity="0.2"><g><g><path d=""></path></g></g></g><g fill="#000000" fill-opacity="0.4"><g display="none"></g></g></g></g></g></g><g opacity="0.3" aria-labelledby="id-71-title" filter="url(&quot;#filter-id-71&quot;)" style="cursor: pointer;" transform="translate(0,129)"><g fill="#ffffff" opacity="0"><rect width="66" height="21"></rect></g><g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="#3cabff"><path d=" M15,15  C17.4001,15 22.7998,15.0001 27,15 C31.2002,14.9999 33.2999,6 36,6 C38.7001,6 38.6999,10.5 40.5,10.5 C42.3001,10.5 42.2999,6 45,6 C47.7001,6 50.9999,14.9999 54,15 C57.0002,15.0001 58.7999,15 60,15"></path></g><g shape-rendering="auto" fill="none" stroke-opacity="1" stroke-width="1.7999999999999998" stroke="url(&quot;#gradient-id-74&quot;)"><path d=" M6,15  C8.2501,15 9.7498,15.0001 15,15 C20.2502,14.9999 20.7748,3.6 27,3.6 C33.2252,3.6 33.8998,14.9999 39.9,15 C45.9002,15.0001 45.9748,15 51,15 C56.0252,15 57.7499,15 60,15"></path></g></g><title id="id-71-title">Chart created using amCharts library</title></g><g role="tooltip" visibility="hidden" opacity="0" transform="translate(101.69566130738207,76.73967080250304)"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(-10,-15)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,10 a0,0 0 0 1 -0,0 L20,10 L15,10 L10,15 L5,10 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(0,-15)"><g transform="translate(0,5)" display="none"></g></g></g></g><g role="tooltip" visibility="hidden" opacity="0" transform="translate(86.36957663422758,65.17458850312882)"><g fill="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke="#000000" style="pointer-events: none;" transform="translate(-10,-15)"><path d="M0,0 L20,0 a0,0 0 0 1 0,0 L20,10 a0,0 0 0 1 -0,0 L20,10 L15,10 L10,15 L5,10 L0,10 a0,0 0 0 1 -0,-0 L0,0 a0,0 0 0 1 0,-0"></path></g><g><g fill="#ffffff" style="pointer-events: none;" transform="translate(0,-15)"><g transform="translate(0,5)" display="none"></g></g></g></g></g></g></g></g></svg></div></div>
+                              <div class="text-center">
+                                 <h4>50.03%</h4>
+                                 <p class="mb-0">CPU usage is<span class="text-primary pl-2">good</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="iq-card bg-danger">
+                           <div class="iq-card-body box iq-box-relative">
+                              <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                 <div class="col-4 p-0">
+                                    <div class="float-left progress-round income-progress mr-2" data-value="80">
+                                       <span class="progress-left">
+                                       <span class="progress-bar border-white" style="transform: rotate(108deg);"></span>
+                                       </span>
+                                       <span class="progress-right">
+                                       <span class="progress-bar border-white" style="transform: rotate(180deg);"></span>
+                                       </span>
+                                       <div class="progress-value w-100 h-100 rounded d-flex align-items-center justify-content-center text-center">
+                                          <div class="h4 mb-0">12</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-8 pr-0">
+                                    <h5 class="d-block mt-2 mb-3 text-white">Most Recent Alarams</h5>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="iq-card">
+                           <div class="iq-card-body box iq-box-relative rounded">
+                              <div class="d-flex align-items-center">
+                                 <div class="float-left progress-round heatmap-progress" data-value="80">
+                                    <span class="progress-left">
+                                    <span class="progress-bar border-primary" style="transform: rotate(108deg);"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                    <span class="progress-bar border-success" style="transform: rotate(180deg);"></span>
+                                    </span>
+                                 </div>
+                                 <div class="pl-3">
+                                    <h5 class="d-block mt-0 mb-1 text-black">Heat Map</h5>
+                                    <ul class="d-inline-block p-0 m-0 list-inline">
+                                       <li class="line-height-3">
+                                          <span class="text-danger total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                          <span class="bg-danger rounded"></span>Clear</span>
+                                       </li>
+                                       <li class="line-height-3">
+                                          <span class="text-primary total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                          <span class="bg-primary rounded"></span>Critical</span>
+                                       </li>
+                                       <li class="line-height-3">
+                                          <span class="text-success total-progress position-relative pl-2 font-size-12 font-weight-500">
+                                          <span class="bg-success rounded"></span>Trouble</span>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Ram Usage</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body" style="position: relative;">
+                           <div id="report-chart-04" style="min-height: 195px;"><div id="apexchartsysb3e4rkj" class="apexcharts-canvas apexchartsysb3e4rkj light" style="width: 721px; height: 180px;"><svg id="SvgjsSvg2342" width="721" height="180" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG2344" class="apexcharts-inner apexcharts-graphical" transform="translate(41.359375, 30)"><defs id="SvgjsDefs2343"><clippath id="gridRectMaskysb3e4rkj"><rect id="SvgjsRect2350" width="673.46875" height="126.34800000000001" x="-2" y="-2" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><clippath id="gridRectMarkerMaskysb3e4rkj"><rect id="SvgjsRect2351" width="671.46875" height="124.34800000000001" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath><lineargradient id="SvgjsLinearGradient2357" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop2358" stop-opacity="0.65" stop-color="rgba(78,55,178,0.65)" offset="0"></stop><stop id="SvgjsStop2359" stop-opacity="0.5" stop-color="rgba(167,155,217,0.5)" offset="1"></stop><stop id="SvgjsStop2360" stop-opacity="0.5" stop-color="rgba(167,155,217,0.5)" offset="1"></stop></lineargradient></defs><line id="SvgjsLine2349" x1="0" y1="0" x2="0" y2="122.34800000000001" stroke="#b6b6b6" stroke-dasharray="3" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="122.34800000000001" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line><g id="SvgjsG2363" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG2364" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"><text id="SvgjsText2365" font-family="Helvetica, Arial, sans-serif" x="0" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2366" style="font-family: Helvetica, Arial, sans-serif;">Jan</tspan><title>Jan</title></text><text id="SvgjsText2367" font-family="Helvetica, Arial, sans-serif" x="111.578125" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2368" style="font-family: Helvetica, Arial, sans-serif;">Feb</tspan><title>Feb</title></text><text id="SvgjsText2369" font-family="Helvetica, Arial, sans-serif" x="223.15625" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2370" style="font-family: Helvetica, Arial, sans-serif;">Mar</tspan><title>Mar</title></text><text id="SvgjsText2371" font-family="Helvetica, Arial, sans-serif" x="334.734375" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2372" style="font-family: Helvetica, Arial, sans-serif;">Apr</tspan><title>Apr</title></text><text id="SvgjsText2373" font-family="Helvetica, Arial, sans-serif" x="446.3125" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2374" style="font-family: Helvetica, Arial, sans-serif;">May</tspan><title>May</title></text><text id="SvgjsText2375" font-family="Helvetica, Arial, sans-serif" x="557.890625" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2376" style="font-family: Helvetica, Arial, sans-serif;">Jun</tspan><title>Jun</title></text><text id="SvgjsText2377" font-family="Helvetica, Arial, sans-serif" x="669.46875" y="151.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan2378" style="font-family: Helvetica, Arial, sans-serif;">Jul</tspan><title>Jul</title></text></g><line id="SvgjsLine2379" x1="0" y1="123.34800000000001" x2="669.46875" y2="123.34800000000001" stroke="#78909c" stroke-dasharray="0" stroke-width="1"></line></g><g id="SvgjsG2391" class="apexcharts-grid"><g id="SvgjsG2392" class="apexcharts-gridlines-horizontal"><line id="SvgjsLine2399" x1="0" y1="0" x2="669.46875" y2="0" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2400" x1="0" y1="20.391333333333336" x2="669.46875" y2="20.391333333333336" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2401" x1="0" y1="40.78266666666667" x2="669.46875" y2="40.78266666666667" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2402" x1="0" y1="61.17400000000001" x2="669.46875" y2="61.17400000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2403" x1="0" y1="81.56533333333334" x2="669.46875" y2="81.56533333333334" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2404" x1="0" y1="101.95666666666668" x2="669.46875" y2="101.95666666666668" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine2405" x1="0" y1="122.34800000000001" x2="669.46875" y2="122.34800000000001" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line></g><g id="SvgjsG2393" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine2394" x1="111.578125" y1="123.34800000000001" x2="111.578125" y2="129.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2395" x1="223.15625" y1="123.34800000000001" x2="223.15625" y2="129.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2396" x1="334.734375" y1="123.34800000000001" x2="334.734375" y2="129.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2397" x1="446.3125" y1="123.34800000000001" x2="446.3125" y2="129.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2398" x1="557.890625" y1="123.34800000000001" x2="557.890625" y2="129.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine2407" x1="0" y1="122.34800000000001" x2="669.46875" y2="122.34800000000001" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine2406" x1="0" y1="1" x2="0" y2="122.34800000000001" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG2353" class="apexcharts-area-series apexcharts-plot-series"><g id="SvgjsG2354" class="apexcharts-series" seriesName="series1" data:longestSeries="true" rel="1" data:realIndex="0"><path id="SvgjsPath2361" d="M 0 122.34800000000001L 0 112.15233333333335C 39.05234374999999 112.15233333333335 72.52578125 40.78266666666667 111.57812499999999 40.78266666666667C 150.63046874999998 40.78266666666667 184.10390624999997 81.56533333333334 223.15624999999997 81.56533333333334C 262.20859375 81.56533333333334 295.68203124999997 20.391333333333336 334.73437499999994 20.391333333333336C 373.7867187499999 20.391333333333336 407.26015624999997 101.95666666666668 446.31249999999994 101.95666666666668C 485.36484375 101.95666666666668 518.83828125 61.17400000000001 557.890625 61.17400000000001C 596.94296875 61.17400000000001 630.4164062499999 99.91753333333335 669.4687499999999 99.91753333333335C 669.4687499999999 99.91753333333335 669.4687499999999 99.91753333333335 669.4687499999999 122.34800000000001M 669.4687499999999 99.91753333333335z" fill="url(#SvgjsLinearGradient2357)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMaskysb3e4rkj)" pathTo="M 0 122.34800000000001L 0 112.15233333333335C 39.05234374999999 112.15233333333335 72.52578125 40.78266666666667 111.57812499999999 40.78266666666667C 150.63046874999998 40.78266666666667 184.10390624999997 81.56533333333334 223.15624999999997 81.56533333333334C 262.20859375 81.56533333333334 295.68203124999997 20.391333333333336 334.73437499999994 20.391333333333336C 373.7867187499999 20.391333333333336 407.26015624999997 101.95666666666668 446.31249999999994 101.95666666666668C 485.36484375 101.95666666666668 518.83828125 61.17400000000001 557.890625 61.17400000000001C 596.94296875 61.17400000000001 630.4164062499999 99.91753333333335 669.4687499999999 99.91753333333335C 669.4687499999999 99.91753333333335 669.4687499999999 99.91753333333335 669.4687499999999 122.34800000000001M 669.4687499999999 99.91753333333335z" pathFrom="M -1 142.73933333333335L -1 142.73933333333335L 111.57812499999999 142.73933333333335L 223.15624999999997 142.73933333333335L 334.73437499999994 142.73933333333335L 446.31249999999994 142.73933333333335L 557.890625 142.73933333333335L 669.4687499999999 142.73933333333335"></path><path id="SvgjsPath2362" d="M 0 112.15233333333335C 39.05234374999999 112.15233333333335 72.52578125 40.78266666666667 111.57812499999999 40.78266666666667C 150.63046874999998 40.78266666666667 184.10390624999997 81.56533333333334 223.15624999999997 81.56533333333334C 262.20859375 81.56533333333334 295.68203124999997 20.391333333333336 334.73437499999994 20.391333333333336C 373.7867187499999 20.391333333333336 407.26015624999997 101.95666666666668 446.31249999999994 101.95666666666668C 485.36484375 101.95666666666668 518.83828125 61.17400000000001 557.890625 61.17400000000001C 596.94296875 61.17400000000001 630.4164062499999 99.91753333333335 669.4687499999999 99.91753333333335" fill="none" fill-opacity="1" stroke="#4e37b2" stroke-opacity="1" stroke-linecap="butt" stroke-width="4" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMaskysb3e4rkj)" pathTo="M 0 112.15233333333335C 39.05234374999999 112.15233333333335 72.52578125 40.78266666666667 111.57812499999999 40.78266666666667C 150.63046874999998 40.78266666666667 184.10390624999997 81.56533333333334 223.15624999999997 81.56533333333334C 262.20859375 81.56533333333334 295.68203124999997 20.391333333333336 334.73437499999994 20.391333333333336C 373.7867187499999 20.391333333333336 407.26015624999997 101.95666666666668 446.31249999999994 101.95666666666668C 485.36484375 101.95666666666668 518.83828125 61.17400000000001 557.890625 61.17400000000001C 596.94296875 61.17400000000001 630.4164062499999 99.91753333333335 669.4687499999999 99.91753333333335" pathFrom="M -1 142.73933333333335L -1 142.73933333333335L 111.57812499999999 142.73933333333335L 223.15624999999997 142.73933333333335L 334.73437499999994 142.73933333333335L 446.31249999999994 142.73933333333335L 557.890625 142.73933333333335L 669.4687499999999 142.73933333333335"></path><g id="SvgjsG2355" class="apexcharts-series-markers-wrap"><g class="apexcharts-series-markers"><circle id="SvgjsCircle2413" r="0" cx="0" cy="0" class="apexcharts-marker wk06pzi36k no-pointer-events" stroke="#ffffff" fill="#4e37b2" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g><g id="SvgjsG2356" class="apexcharts-datalabels"></g></g></g><line id="SvgjsLine2408" x1="0" y1="0" x2="669.46875" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine2409" x1="0" y1="0" x2="669.46875" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG2410" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG2411" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG2412" class="apexcharts-point-annotations"></g></g><rect id="SvgjsRect2348" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect><g id="SvgjsG2380" class="apexcharts-yaxis" rel="0" transform="translate(5.359375, 0)"><g id="SvgjsG2381" class="apexcharts-yaxis-texts-g"><text id="SvgjsText2382" font-family="Helvetica, Arial, sans-serif" x="20" y="31.6" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">140</text><text id="SvgjsText2383" font-family="Helvetica, Arial, sans-serif" x="20" y="52.09133333333334" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">120</text><text id="SvgjsText2384" font-family="Helvetica, Arial, sans-serif" x="20" y="72.58266666666667" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">100</text><text id="SvgjsText2385" font-family="Helvetica, Arial, sans-serif" x="20" y="93.07400000000001" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">80</text><text id="SvgjsText2386" font-family="Helvetica, Arial, sans-serif" x="20" y="113.56533333333334" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">60</text><text id="SvgjsText2387" font-family="Helvetica, Arial, sans-serif" x="20" y="134.05666666666667" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">40</text><text id="SvgjsText2388" font-family="Helvetica, Arial, sans-serif" x="20" y="154.548" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">20</text></g><g id="SvgjsG2389" class="apexcharts-yaxis-title"><text id="SvgjsText2390" font-family="Helvetica, Arial, sans-serif" x="-16.359375" y="91.174" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="regular" fill="#373d3f" class="apexcharts-yaxis-title-text " style="font-family: Helvetica, Arial, sans-serif;" transform="rotate(-90 0 0)"></text></g></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip light"><div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(78, 55, 178);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div><div class="apexcharts-xaxistooltip apexcharts-xaxistooltip-bottom light"><div class="apexcharts-xaxistooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div></div><div class="apexcharts-toolbar"><div class="apexcharts-menu-icon" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="apexcharts-menu"><div class="apexcharts-menu-item exportSVG" title="Download SVG">Download SVG</div><div class="apexcharts-menu-item exportPNG" title="Download PNG">Download PNG</div></div></div></div></div>
+                        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 762px; height: 225px;"></div></div><div class="contract-trigger"></div></div></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-12">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Active Instances</h4>
+                           </div>
+                           <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div class="dropdown">
+                                 <span class="dropdown-toggle text-primary" id="dropdownMenuButton2" data-toggle="dropdown">
+                                 <i class="ri-more-2-fill"></i>
+                                 </span>
+                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2">
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-eye-fill mr-2"></i>View</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-printer-fill mr-2"></i>Print</a>
+                                    <a class="dropdown-item" href="https://templates.iqonic.design/server360/html/#"><i class="ri-file-download-fill mr-2"></i>Download</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <div class="table-responsive">
+                              <table class="table mb-0 table-borderless tbl-server-info">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Servers</th>
+                                       <th scope="col"></th>
+                                       <th scope="col">IP Address</th>
+                                       <th scope="col">Created</th>
+                                       <th scope="col">Tag</th>
+                                       <th scope="col">Provider</th>
+                                       <th scope="col"></th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>
+                                          <div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+                                             <span class="font-size-20 align-item-center"><i class="fa fa-user" aria-hidden="true"></i><span class="bg-success dots"></span></span>
+                                          </div>
+                                       </td>
+                                       <td>
+                                          <h6>Noveruche Admin</h6>
+                                          <span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+                                       </td>
+                                       <td>192.168.130.26</td>
+                                       <td>2 Months ago</td>
+                                       <td>
+                                          <div class="text-danger">Web Server</div>
+                                       </td>
+                                       <td>Indioserver</td>
+                                       <td>
+                                          <span class="text-black font-size-24" id="dropdownMenuButton3">
+                                          <i class="ri-more-fill"></i>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+                                             <span class="font-size-20 align-item-center"><i class="fa fa-user" aria-hidden="true"></i><span class="bg-success dots"></span></span>
+                                          </div>
+                                       </td>
+                                       <td>
+                                          <h6>Developing Hier</h6>
+                                          <span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+                                       </td>
+                                       <td>192.168.130.26</td>
+                                       <td>4 Months ago</td>
+                                       <td>
+                                          <div class="text-primary">Desky</div>
+                                       </td>
+                                       <td>Jeniorde</td>
+                                       <td>
+                                          <span class="text-black font-size-24" id="dropdownMenuButton4">
+                                          <i class="ri-more-fill"></i>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+                                             <span class="font-size-20 align-item-center"><i class="fa fa-user" aria-hidden="true"></i><span class="bg-success dots"></span></span>
+                                          </div>
+                                       </td>
+                                       <td>
+                                          <h6>Nalurel Dilam</h6>
+                                          <span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+                                       </td>
+                                       <td>192.168.130.26</td>
+                                       <td>5 Months ago</td>
+                                       <td>
+                                          <div class="text-success">Software</div>
+                                       </td>
+                                       <td>Walikarsi</td>
+                                       <td>
+                                          <span class="text-black font-size-24" id="dropdownMenuButton5">
+                                          <i class="ri-more-fill"></i>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+                                             <span class="font-size-20 align-item-center"><i class="fa fa-user" aria-hidden="true"></i><span class="bg-success dots"></span></span>
+                                          </div>
+                                       </td>
+                                       <td>
+                                          <h6>Nariokali Borji</h6>
+                                          <span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+                                       </td>
+                                       <td>192.168.130.26</td>
+                                       <td>6 Months ago</td>
+                                       <td>
+                                          <div class="text-primary">Innohouse</div>
+                                       </td>
+                                       <td>Leoharshan</td>
+                                       <td>
+                                          <span class="text-black font-size-24" id="dropdownMenuButton6">
+                                          <i class="ri-more-fill"></i>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+                                             <span class="font-size-20 align-item-center"><i class="fa fa-user" aria-hidden="true"></i><span class="bg-success dots"></span></span>
+                                          </div>
+                                       </td>
+                                       <td>
+                                          <h6>Bulesta Karolin</h6>
+                                          <span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+                                       </td>
+                                       <td>192.168.130.26</td>
+                                       <td>6 Months ago</td>
+                                       <td>
+                                          <div class="text-danger">Rodrigez</div>
+                                       </td>
+                                       <td>Karilorni</td>
+                                       <td>
+                                          <span class="text-black font-size-24" id="dropdownMenuButton7">
+                                          <i class="ri-more-fill"></i>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Wrapper END -->
+      <!-- Footer -->
+      <footer class="iq-footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-6">
+                  <ul class="list-inline mb-0">
+                     <li class="list-inline-item"><a href="https://templates.iqonic.design/server360/html/privacy-policy.html">Privacy Policy</a></li>
+                     <li class="list-inline-item"><a href="https://templates.iqonic.design/server360/html/terms-of-service.html">Terms of Use</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-6 text-right">
+                  Copyright 2020 <a href="https://templates.iqonic.design/server360/html/#">Server360</a> All Rights Reserved.
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer END -->
+      <!-- color-customizer -->
+      <div class="iq-colorbox color-fix">
+         <div class="buy-button"> <a class="color-full" href="https://templates.iqonic.design/server360/html/#"><i class="fa fa-spinner fa-spin"></i></a> </div>
+         <div id="right-sidebar-scrollbar" class="iq-colorbox-inner" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;"><div class="scroll-content">
+            <div class="clearfix color-picker">
+               <h3 class="iq-font-black">Server360 Awesome Color</h3>
+               <p>This color combo available inside whole template. You can change on your wish, Even you can create your own with limitless possibilities! </p>
+               <ul class="iq-colorselect clearfix">
+                  <li class="color-1 iq-colormark" data-style="color-1"></li>
+                  <li class="color-2" data-style="iq-color-2"></li>
+                  <li class="color-3" data-style="iq-color-3"></li>
+                  <li class="color-4" data-style="iq-color-4"></li>
+                  <li class="color-5" data-style="iq-color-5"></li>
+                  <li class="color-6" data-style="iq-color-6"></li>
+                  <li class="color-7" data-style="iq-color-7"></li>
+                  <li class="color-8" data-style="iq-color-8"></li>
+                  <li class="color-9" data-style="iq-color-9"></li>
+                  <li class="color-10" data-style="iq-color-10"></li>
+                  <li class="color-11" data-style="iq-color-11"></li>
+                  <li class="color-12" data-style="iq-color-12"></li>
+                  <li class="color-13" data-style="iq-color-13"></li>
+                  <li class="color-14" data-style="iq-color-14"></li>
+                  <li class="color-15" data-style="iq-color-15"></li>
+                  <li class="color-16" data-style="iq-color-16"></li>
+                  <li class="color-17" data-style="iq-color-17"></li>
+                  <li class="color-18" data-style="iq-color-18"></li>
+                  <li class="color-19" data-style="iq-color-19"></li>
+                  <li class="color-20" data-style="iq-color-20"></li>
+               </ul>
+               <a target="_blank" class="btn btn-primary d-block mt-3" href="https://templates.iqonic.design/server360/html/">Purchase Now</a>
+            </div>
+         </div><div class="scrollbar-track scrollbar-track-x" style="display: none;"><div class="scrollbar-thumb scrollbar-thumb-x" style="width: 300px; transform: translate3d(0px, 0px, 0px);"></div></div><div class="scrollbar-track scrollbar-track-y" style="display: none;"><div class="scrollbar-thumb scrollbar-thumb-y" style="height: 880px; transform: translate3d(0px, 0px, 0px);"></div></div></div>
+      </div>
+      <!-- color-customizer END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/jquery.min.js.download"></script>
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/popper.min.js.download"></script>
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/bootstrap.min.js.download"></script>
+      <!-- Appear JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/jquery.appear.js.download"></script>
+      <!-- Countdown JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/countdown.min.js.download"></script>
+      <!-- Counterup JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/waypoints.min.js.download"></script>
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/jquery.counterup.min.js.download"></script>
+      <!-- Wow JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/wow.min.js.download"></script>
+      <!-- Apexcharts JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/apexcharts.js.download"></script>
+      <!-- Slick JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/slick.min.js.download"></script>
+      <!-- Select2 JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/select2.min.js.download"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/owl.carousel.min.js.download"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/jquery.magnific-popup.min.js.download"></script>
+      <!-- Smooth Scrollbar JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/smooth-scrollbar.js.download"></script>
+      <!-- lottie JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/lottie.js.download"></script>
+      <!-- am core JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/core.js.download"></script>
+      <!-- am charts JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/charts.js.download"></script>
+      <!-- am animated JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/animated.js.download"></script>
+      <!-- am kelly JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/kelly.js.download"></script>
+      <!-- am maps JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/maps.js.download"></script>
+      <!-- am worldLow JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/worldLow.js.download"></script>
+      <!-- Raphael-min JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/raphael-min.js.download"></script>
+      <!-- Morris JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/morris.js.download"></script>
+      <!-- Morris min JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/morris.min.js.download"></script>
+      <!-- Flatpicker Js -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/flatpickr.js.download"></script>
+      <!-- Style Customizer -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/style-customizer.js.download"></script>
+      <!-- Chart Custom JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/chart-custom.js.download"></script>
+      <svg id="SvgjsSvg1272" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1273"></defs><polyline id="SvgjsPolyline1274" points="0,0"></polyline><path id="SvgjsPath1275" d="M-1 142.73933333333335L-1 142.73933333333335C-1 142.73933333333335 111.57812499999999 142.73933333333335 111.57812499999999 142.73933333333335C111.57812499999999 142.73933333333335 223.15624999999997 142.73933333333335 223.15624999999997 142.73933333333335C223.15624999999997 142.73933333333335 334.73437499999994 142.73933333333335 334.73437499999994 142.73933333333335C334.73437499999994 142.73933333333335 446.31249999999994 142.73933333333335 446.31249999999994 142.73933333333335C446.31249999999994 142.73933333333335 557.890625 142.73933333333335 557.890625 142.73933333333335C557.890625 142.73933333333335 669.4687499999999 142.73933333333335 669.4687499999999 142.73933333333335C669.4687499999999 142.73933333333335 669.4687499999999 142.73933333333335 669.4687499999999 142.73933333333335 "></path></svg><!-- Custom JavaScript -->
+      <script src="./Server360 - Responsive Bootstrap 4 Admin Dashboard Template_files/custom.js.download"></script>
+   
+<div hidden=""><div style="width: 100%; height: 100%; position: relative;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" style="width: 100%; height: 100%; overflow: visible;"><desc>JavaScript chart by amCharts</desc><defs><clippath id="id-143"><path></path></clippath><filter id="filter-id-148" width="200%" height="200%" x="-50%" y="-50%"><fegaussianblur result="blurOut" in="SourceGraphic" stdDeviation="1.5"></fegaussianblur><feoffset result="offsetBlur" dx="1" dy="1"></feoffset><feflood flood-color="#000000" flood-opacity="0.5"></feflood><fecomposite in2="offsetBlur" operator="in"></fecomposite><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs></svg></div></div><div></div></body></html>
